@@ -12,13 +12,13 @@ contract ChallengeTwoTest is Test{
     string public rpcUrl;
     
   // Storage slot calculations for private mappings
-    bytes32 constant HASSOLVED1_POSITION = keccak256("hasSolved1");
-    bytes32 constant HASSOLVED2_POSITION = keccak256("hasSolved2");
-    bytes32 constant HASCOMPLETED_POSITION = keccak256("hasCompleted");
-
-    // bytes32 constant HASSOLVED1_POSITION = 0;
-    // bytes32 constant HASSOLVED2_POSITION = bytes32(uint256(1));
+    // bytes32 constant HASSOLVED1_POSITION = keccak256("hasSolved1");
+    // bytes32 constant HASSOLVED2_POSITION = keccak256("hasSolved2");
     // bytes32 constant HASCOMPLETED_POSITION = keccak256("hasCompleted");
+
+    bytes32 constant HASSOLVED1_POSITION = 0;
+    bytes32 constant HASSOLVED2_POSITION = bytes32(uint256(1));
+    bytes32 constant HASCOMPLETED_POSITION = keccak256("hasCompleted");
 
     function setUp() public {
         rpcUrl = vm.envString("MAINNET_RPC_URL");
