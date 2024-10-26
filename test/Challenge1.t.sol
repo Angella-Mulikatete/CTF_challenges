@@ -10,7 +10,7 @@ contract Challenge1Test is Test {
     address user = makeAddr("user");
 
     function setUp() public {
-        vm.createSelectFork("");
+        vm.createSelectFork("https://eth-sepolia.g.alchemy.com/v2/QVY2UstBJhd7ELG4N6yM2GNbve_RT-0Y");
         vm.startPrank(owner);
         chal = new Challenge();
         vm.stopPrank();
