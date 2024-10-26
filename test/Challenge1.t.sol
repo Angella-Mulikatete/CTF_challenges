@@ -22,7 +22,7 @@ contract Challenge1Test is Test {
         // assertTrue(chal.isPause());
     }
 
-        function test_exploitMe_when_Paused_reverts() public {
+    function test_exploitMe_when_Paused_reverts() public {
         test_pause_only_owner_can_pause();
         vm.prank(user);
         vm.expectRevert();

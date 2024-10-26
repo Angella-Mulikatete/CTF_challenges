@@ -24,6 +24,7 @@ contract ChallengeTwo {
         require(!hasSolved2[tx.origin], "already solved");
         userPoint[tx.origin]++;
         msg.sender.call("");
+        
         if (userPoint[tx.origin] != 4) {
             revert("invalid point Accumulated");
         }
